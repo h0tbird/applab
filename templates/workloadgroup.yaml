@@ -2,12 +2,12 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: WorkloadGroup
 metadata:
-  name: httpbin
+  name: vm-httpbin
   namespace: httpbin
 spec:
   metadata:
     labels:
-      app: httpbin
+      app: vm-httpbin
   template:
-    serviceAccount: default
+    serviceAccount: vm-httpbin
     network: network0
