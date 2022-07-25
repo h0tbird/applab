@@ -19,7 +19,7 @@ Create files for hosts running this service out of kubernetes:
 istioctl x workload entry configure \
   -r 1-14-1 \
   -f ./templates/workloadgroup.yaml \
-  --clusterID cluster1 \
+  --clusterID kube-01 \
   --autoregister \
   -o ./tmp/vm-files
 ```
