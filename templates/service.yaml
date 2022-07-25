@@ -8,8 +8,8 @@ metadata:
   namespace: httpbin
 spec:
   ports:
-  - name: 5000-8080
-    port: 5000
+  - name: 80-8080
+    port: 80
     protocol: TCP
     targetPort: 8080
   selector:
