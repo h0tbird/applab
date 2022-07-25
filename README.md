@@ -10,7 +10,7 @@ docker buildx build --platform linux/amd64,linux/arm64 -t h0tbird/httpbin:latest
 Initial scaffolding:
 ```
 k -n httpbin create deployment httpbin --dry-run=client --image h0tbird/httpbin -o yaml > templates/deployment.yaml
-k -n httpbin create service clusterip httpbin --tcp=80:8080 --dry-run=client -o yaml > templates/service.yaml
+k -n httpbin create service clusterip httpbin --tcp=80:80 --dry-run=client -o yaml > templates/service.yaml
 ```
 
 Create files for hosts running this service out of kubernetes:
