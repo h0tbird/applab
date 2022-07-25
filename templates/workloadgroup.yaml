@@ -9,5 +9,13 @@ spec:
     labels:
       app: httpbin
   template:
+    ports:
+      http: 8080
     serviceAccount: httpbin
     network: vm-network
+  probe:
+    periodSeconds: 5
+    initialDelaySeconds: 1
+    httpGet:
+      port: 8080
+      path: /get
