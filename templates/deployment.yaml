@@ -17,7 +17,7 @@ spec:
         app: httpbin
     spec:
       containers:
-      - image: mccutchen/go-httpbin:latest
+      - image: h0tbird/httpbin:latest
         name: go-httpbin
 ---
 apiVersion: apps/v1
