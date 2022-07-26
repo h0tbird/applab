@@ -23,3 +23,8 @@ istioctl x workload entry configure \
   --autoregister \
   -o ./tmp/vm-files
 ```
+
+Trouble-shooting with `netshoot`:
+```
+k -n httpbin exec -it sleep-55ffcd8d69-nv92w -- zsh
+```
