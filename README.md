@@ -17,7 +17,7 @@ k -n httpbin create service clusterip httpbin --tcp=80:8080 --dry-run=client -o 
 Create files for hosts running this service out of kubernetes:
 ```
 istioctl x workload entry configure \
-  -r 1-14-2 \
+  -r 1-15-0 \
   -f ./templates/workloadgroup.yaml \
   --clusterID kube-01 \
   --autoregister \
