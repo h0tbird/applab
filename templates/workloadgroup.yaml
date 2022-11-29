@@ -13,6 +13,7 @@ spec:
       http: 8080
     serviceAccount: httpbin
     network: vm-network
+    locality: milky-way/solar-system/virt-01
   probe:
     periodSeconds: 5
     initialDelaySeconds: 1
