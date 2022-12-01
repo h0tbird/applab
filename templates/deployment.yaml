@@ -13,6 +13,8 @@ spec:
       app: httpbin
   template:
     metadata:
+      annotations:
+        sidecar.istio.io/proxyImage: docker.io/h0tbird/proxyv2:1.16.0
       labels:
         app: httpbin
     spec:
@@ -31,6 +33,8 @@ spec:
       app: sleep
   template:
     metadata:
+      annotations:
+        sidecar.istio.io/proxyImage: docker.io/h0tbird/proxyv2:1.16.0
       labels:
         app: sleep
     spec:
