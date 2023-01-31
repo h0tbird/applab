@@ -14,6 +14,7 @@ spec:
     serviceAccount: httpbin
     network: vm-network
     locality: milky-way/solar-system/virt-01
+    # k --context kube-01 -n httpbin patch workloadentries httpbin-192.168.64.5-vm-network --type merge -p '{"spec": {"locality": "milky-way/solar-system/virt-01"}}'
   probe:
     periodSeconds: 5
     initialDelaySeconds: 1
