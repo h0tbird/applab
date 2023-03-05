@@ -2,10 +2,10 @@
 apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
-  name: httpbin
+  name: httpbin-demo-com
   namespace: httpbin
 spec:
-  host: httpbin.httpbin.svc.cluster.local
+  host: httpbin.demo.com
   trafficPolicy:
     connectionPool:
       http:
