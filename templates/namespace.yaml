@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   labels:
-    istio.io/rev: 1-17-0
+    istio.io/rev: 1-17-1
   name: httpbin
 spec:
   finalizers:
