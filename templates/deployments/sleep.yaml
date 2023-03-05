@@ -2,29 +2,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: httpbin
-  name: httpbin
-  namespace: httpbin
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: httpbin
-  template:
-    metadata:
-      # annotations:
-      #   sidecar.istio.io/proxyImage: docker.io/h0tbird/proxyv2:1.17.1
-      labels:
-        app: httpbin
-    spec:
-      containers:
-      - image: h0tbird/httpbin:latest
-        name: go-httpbin
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
   name: sleep
 spec:
   replicas: 1
