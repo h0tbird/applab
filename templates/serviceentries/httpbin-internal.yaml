@@ -12,7 +12,7 @@ spec:
       number: 80
       protocol: HTTP
       targetPort: 8080
-  resolution: STATIC
+  resolution: DNS
   workloadSelector:
     labels:
       app: httpbin
