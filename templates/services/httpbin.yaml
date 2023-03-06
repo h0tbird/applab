@@ -9,10 +9,10 @@ metadata:
   namespace: httpbin
 spec:
   ports:
-  - name: 80-8080
+  - name: http
     port: 80
     protocol: TCP
-    targetPort: 8080
+    targetPort: http
   selector:
     app: httpbin
   type: ClusterIP

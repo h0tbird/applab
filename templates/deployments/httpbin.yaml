@@ -21,3 +21,7 @@ spec:
       containers:
       - image: h0tbird/httpbin:latest
         name: go-httpbin
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
