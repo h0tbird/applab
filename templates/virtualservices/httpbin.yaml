@@ -4,6 +4,8 @@ kind: VirtualService
 metadata:
   name: httpbin
 spec:
+  gateways:
+  - ingress-gateway
   hosts:
   - httpbin.demo.com
   http:
