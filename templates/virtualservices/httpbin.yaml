@@ -5,13 +5,13 @@ metadata:
   name: httpbin
 spec:
   gateways:
-  - ingress-gateway
+  - istio-system/ingress-gateway
   hosts:
   - '*'
   http:
   - name: default
     route:
     - destination:
-        host: httpbin
+        host: httpbin.httpbin.svc.cluster.local
         port:
           number: 80
