@@ -12,6 +12,6 @@ spec:
   - name: default
     route:
     - destination:
-        host: httpbin.demo.com
+        host: httpbin
         port:
           number: 80

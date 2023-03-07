@@ -13,6 +13,7 @@ spec:
     port: 80
     protocol: TCP
     targetPort: http
+    appProtocol: http2
   selector:
     app: httpbin
   type: ClusterIP
