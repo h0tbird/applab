@@ -1,0 +1,15 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: httpbin
+spec:
+  hosts:
+  - httpbin.demo.com
+  http:
+  - name: default
+    route:
+    - destination:
+        host: httpbin.demo.com
+        port:
+          number: 80
