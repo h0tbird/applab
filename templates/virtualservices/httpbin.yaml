@@ -7,7 +7,7 @@ spec:
   gateways:
   - ingress-gateway
   hosts:
-  - httpbin.demo.com
+  - '*'
   http:
   - name: default
     route:
