@@ -5,7 +5,7 @@ metadata:
   name: httpbin-internal
 spec:
   hosts:
-    - httpbin.demo.com
+    - httpbin.demo.lab
   location: MESH_INTERNAL
   ports:
     - name: http

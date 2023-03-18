@@ -7,7 +7,7 @@ spec:
   gateways:
   - istio-system/ingress-gateway
   hosts:
-  - httpbin.demo.com
+  - httpbin.demo.lab
   http:
   - name: default
     route:

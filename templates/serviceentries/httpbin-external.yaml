@@ -5,7 +5,7 @@ metadata:
   name: httpbin-external
 spec:
   hosts:
-    - httpbin.demo.com
+    - httpbin.demo.lab
   location: MESH_EXTERNAL
   ports:
     - name: https
