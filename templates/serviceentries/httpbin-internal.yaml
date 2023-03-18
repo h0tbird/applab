@@ -1,18 +1,18 @@
 ---
-apiVersion: networking.istio.io/v1beta1
-kind: ServiceEntry
-metadata:
-  name: httpbin-internal
-spec:
-  hosts:
-    - httpbin.demo.lab
-  location: MESH_INTERNAL
-  ports:
-    - name: http
-      number: 80
-      protocol: HTTP
-      targetPort: 8080
-  resolution: DNS
-  workloadSelector:
-    labels:
-      app: httpbin
+# apiVersion: networking.istio.io/v1beta1
+# kind: ServiceEntry
+# metadata:
+#   name: httpbin-internal
+# spec:
+#   hosts:
+#     - httpbin.demo.lab
+#   location: MESH_INTERNAL
+#   ports:
+#     - name: http
+#       number: 80
+#       protocol: HTTP
+#       targetPort: 8080
+#   resolution: DNS
+#   workloadSelector:
+#     labels:
+#       app: httpbin

@@ -1,21 +1,21 @@
 ---
-apiVersion: networking.istio.io/v1beta1
-kind: DestinationRule
-metadata:
-  name: httpbin-demo-lab
-  namespace: httpbin
-spec:
-  host: httpbin.demo.lab
-  trafficPolicy:
-    connectionPool:
-      http:
-        maxRequestsPerConnection: 1
-    loadBalancer:
-      simple: ROUND_ROBIN
-      localityLbSetting:
-        enabled: true
-        failover: []
-    outlierDetection:
-      consecutive5xxErrors: 1
-      interval: 1s
-      baseEjectionTime: 1m
+# apiVersion: networking.istio.io/v1beta1
+# kind: DestinationRule
+# metadata:
+#   name: httpbin-demo-lab
+#   namespace: httpbin
+# spec:
+#   host: httpbin.demo.lab
+#   trafficPolicy:
+#     connectionPool:
+#       http:
+#         maxRequestsPerConnection: 1
+#     loadBalancer:
+#       simple: ROUND_ROBIN
+#       localityLbSetting:
+#         enabled: true
+#         failover: []
+#     outlierDetection:
+#       consecutive5xxErrors: 1
+#       interval: 1s
+#       baseEjectionTime: 1m
