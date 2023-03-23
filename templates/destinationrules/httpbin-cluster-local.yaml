@@ -9,13 +9,13 @@ spec:
   trafficPolicy:
     connectionPool:
       http:
-        maxRequestsPerConnection: 1
+        maxRequestsPerConnection: 10
     loadBalancer:
       simple: ROUND_ROBIN
       localityLbSetting:
         enabled: true
         failover: []
     outlierDetection:
-      consecutive5xxErrors: 1
+      consecutive5xxErrors: 10
       interval: 1s
       baseEjectionTime: 1m
