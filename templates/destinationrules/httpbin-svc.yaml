@@ -5,7 +5,7 @@ metadata:
   name: httpbin-svc
   namespace: httpbin
 spec:
-  host: httpbin.httpbin.svc.{ .Values.domain }
+  host: httpbin.httpbin.svc.{{ .Values.domain }}
   trafficPolicy:
     connectionPool:
       http:
