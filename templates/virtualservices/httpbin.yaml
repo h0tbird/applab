@@ -12,6 +12,6 @@ spec:
   - name: default
     route:
     - destination:
-        host: httpbin.httpbin.svc.cluster.local
+        host: httpbin.httpbin.svc.{ .Values.domain }
         port:
           number: 80
