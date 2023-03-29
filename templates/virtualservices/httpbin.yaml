@@ -5,7 +5,7 @@ metadata:
   name: httpbin
 spec:
   gateways:
-  - istio-system/ingress-gateway
+  - istio-system/ingress-all
   hosts:
   - httpbin.demo.lab
   http:
