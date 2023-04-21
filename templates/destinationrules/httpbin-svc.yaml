@@ -4,7 +4,7 @@ kind: DestinationRule
 metadata:
   name: httpbin-svc
 spec:
-  host: httpbin.httpbin.svc.{{ .Values.domain }}
+  host: httpbin.{{ .Release.Namespace }}.svc.{{ .Values.domain }}
   trafficPolicy:
     connectionPool:
       http:
