@@ -7,7 +7,7 @@ spec:
   gateways:
   - istio-system/ingress-all
   hosts:
-  - {{ .Release.Namespace }}.demo.lab
+  - {{ .Release.Name }}.demo.lab
   http:
   - name: default
     route:
