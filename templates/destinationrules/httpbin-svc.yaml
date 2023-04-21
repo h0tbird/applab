@@ -3,7 +3,6 @@ apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule
 metadata:
   name: httpbin-svc
-  namespace: httpbin
 spec:
   host: httpbin.httpbin.svc.{{ .Values.domain }}
   trafficPolicy:

@@ -3,7 +3,6 @@ apiVersion: networking.istio.io/v1beta1
 kind: WorkloadGroup
 metadata:
   name: httpbin
-  namespace: httpbin
 spec:
   metadata:
     labels:

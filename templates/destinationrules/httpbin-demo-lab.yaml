@@ -3,7 +3,6 @@
 # kind: DestinationRule
 # metadata:
 #   name: httpbin-demo-lab
-#   namespace: httpbin
 # spec:
 #   host: httpbin.demo.lab
 #   trafficPolicy:
