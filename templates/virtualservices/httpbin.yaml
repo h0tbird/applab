@@ -7,11 +7,11 @@ spec:
   gateways:
   - istio-system/ingress-all
   hosts:
-  - {{ .Release.Namespace }}.demo.lab
+  - {{ .Release.Name }}.demo.lab
   http:
   - name: default
     route:
     - destination:
-        host: httpbin.{{ .Release.Namespace }}.svc.{{ .Values.domain }}
+        host: {{ .Release.Name }}.{{ .Release.Namespace }}.svc.{{ .Values.domain }}
         port:
           number: 80
