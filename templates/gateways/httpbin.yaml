@@ -3,6 +3,7 @@ apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
   name: {{ .Release.Name }}
+  namespace: istio-system
 spec:
   selector:
     istio: ingressgateway
@@ -15,4 +16,4 @@ spec:
     - "{{ .Release.Name }}.demo.lab"
     tls:
       mode: SIMPLE
-      credentialName: {{ .Release.Namespace }}/tls-{{ .Release.Name }}
+      credentialName: tls-{{ .Release.Name }}
