@@ -15,4 +15,4 @@ spec:
     - "{{ .Release.Name }}.demo.lab"
     tls:
       mode: SIMPLE
-      credentialName: tls-{{ .Release.Name }}
+      credentialName: {{ .Release.Namespace }}/tls-{{ .Release.Name }}
