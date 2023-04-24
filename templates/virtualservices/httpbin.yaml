@@ -5,7 +5,7 @@ metadata:
   name: httpbin
 spec:
   gateways:
-  - istio-system/{{ .Release.Name }}
+  - {{ .Release.Name }}
   hosts:
   - {{ .Release.Name }}.demo.lab
   http:
