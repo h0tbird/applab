@@ -1,0 +1,15 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  secretName: tls-{{ .Release.Name }}
+  commonName: {{ .Release.Name }}.demo.lab
+  duration: 24h0m0s
+  dnsNames:
+  - "{{ .Release.Name }}.demo.lab"
+  issuerRef:
+    name: ingress-ca
+    kind: ClusterIssuer
+    group: cert-manager.io
