@@ -11,5 +11,5 @@ spec:
   - "{{ .Release.Name }}.demo.lab"
   issuerRef:
     name: ingress-ca
-    kind: Issuer
+    kind: ClusterIssuer
     group: cert-manager.io
