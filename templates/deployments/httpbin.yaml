@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       # annotations:
-      #   sidecar.istio.io/proxyImage: docker.io/h0tbird/proxyv2:1.17.1
+      #   sidecar.istio.io/proxyImage: docker.io/h0tbird/proxyv2:1.17.2
       labels:
         app: httpbin
     spec:
