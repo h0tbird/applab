@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: tcp-echo
-        image: docker.io/istio/tcp-echo-server:1.2
+        image: h0tbird/tcp-echo-server:1.2
         imagePullPolicy: IfNotPresent
         args: [ "9000,9001", "one" ]
         ports:
@@ -48,7 +48,7 @@ spec:
     spec:
       containers:
       - name: tcp-echo
-        image: docker.io/istio/tcp-echo-server:1.2
+        image: h0tbird/tcp-echo-server:1.2
         imagePullPolicy: IfNotPresent
         args: [ "9000,9001", "two" ]
         ports:
