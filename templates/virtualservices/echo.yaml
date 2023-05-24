@@ -8,8 +8,9 @@ spec:
   - echo
   hosts:
   - echo.{{ .Release.Name }}.demo.lab
-  http:
-  - name: default
+  tcp:
+  - match:
+    - port: 31400
     route:
     - destination:
         host: echo.{{ .Release.Namespace }}.svc.{{ .Values.domain }}
