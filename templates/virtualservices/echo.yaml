@@ -5,7 +5,7 @@ metadata:
   name: echo
 spec:
   gateways:
-  - {{ .Release.Name }}
+  - echo
   hosts:
   - echo.{{ .Release.Name }}.demo.lab
   http:
