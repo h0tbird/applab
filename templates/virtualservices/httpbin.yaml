@@ -7,11 +7,11 @@ spec:
   gateways:
   - {{ .Release.Name }}
   hosts:
-  - {{ .Release.Name }}.demo.lab
+  - httpbin.{{ .Release.Name }}.demo.lab
   http:
   - name: default
     route:
     - destination:
-        host: {{ .Release.Name }}.{{ .Release.Namespace }}.svc.{{ .Values.domain }}
+        host: httpbin.{{ .Release.Namespace }}.svc.{{ .Values.domain }}
         port:
           number: 80

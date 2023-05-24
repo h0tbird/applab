@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}
+  name: httpbin
   labels:
     app: httpbin
 spec:
@@ -12,8 +12,6 @@ spec:
       app: httpbin
   template:
     metadata:
-      # annotations:
-      #   sidecar.istio.io/proxyImage: docker.io/h0tbird/proxyv2:1.17.2
       labels:
         app: httpbin
     spec:

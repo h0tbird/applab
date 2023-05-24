@@ -12,7 +12,7 @@ spec:
       name: https
       protocol: HTTPS
     hosts:
-    - "{{ .Release.Name }}.demo.lab"
+    - "httpbin.{{ .Release.Name }}.demo.lab"
     tls:
       mode: SIMPLE
       credentialName: tls-{{ .Release.Name }}
