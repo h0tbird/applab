@@ -2,17 +2,17 @@
 apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
-  name: httpbin
+  name: echo
 spec:
   selector:
     istio: ingressgateway
   servers:
   - port:
-      number: 443
-      name: https
-      protocol: HTTPS
+      number: 31400
+      name: tcp
+      protocol: TCP
     hosts:
-    - "httpbin.{{ .Release.Name }}.demo.lab"
+    - "echo.{{ .Release.Name }}.demo.lab"
     tls:
       mode: SIMPLE
       credentialName: tls-{{ .Release.Name }}

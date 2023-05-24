@@ -1,0 +1,18 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: echo
+spec:
+  gateways:
+  - echo
+  hosts:
+  - echo.{{ .Release.Name }}.demo.lab
+  tcp:
+  - match:
+    - port: 31400
+    route:
+    - destination:
+        host: echo.{{ .Release.Namespace }}.svc.{{ .Values.domain }}
+        port:
+          number: 9000
