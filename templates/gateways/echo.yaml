@@ -1,0 +1,18 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: echo
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 9000
+      name: echo
+      protocol: TCP
+    hosts:
+    - "echo.{{ .Release.Name }}.demo.lab"
+    tls:
+      mode: SIMPLE
+      credentialName: tls-{{ .Release.Name }}
