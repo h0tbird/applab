@@ -5,10 +5,10 @@ metadata:
   name: {{ .Release.Name }}
 spec:
   secretName: tls-{{ .Release.Name }}
-  commonName: {{ .Release.Name }}.demo.lab
   duration: 24h0m0s
   dnsNames:
-  - "{{ .Release.Name }}.demo.lab"
+  - "echo.{{ .Release.Name }}.demo.lab"
+  - "httpbin.{{ .Release.Name }}.demo.lab"
   issuerRef:
     name: ingress-ca
     kind: ClusterIssuer
