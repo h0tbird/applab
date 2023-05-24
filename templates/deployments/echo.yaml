@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo
+  labels:
+    app: echo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echo
+  template:
+    metadata:
+      labels:
+        app: echo
+    spec:
+      containers:
+      - name: echo
+        image: h0tbird/tcp-echo-server:1.2
+        imagePullPolicy: IfNotPresent
+        args: [ "9000,9001", "echo" ]
+        ports:
+        - containerPort: 9000
+        - containerPort: 9001
