@@ -1,0 +1,20 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: echo-svc
+spec:
+  host: echo.{{ .Release.Namespace }}.svc.{{ .Values.domain }}
+  trafficPolicy:
+    connectionPool:
+      http:
+        maxRequestsPerConnection: 10
+    loadBalancer:
+      simple: ROUND_ROBIN
+      localityLbSetting:
+        enabled: true
+        failover: []
+    outlierDetection:
+      consecutive5xxErrors: 10
+      interval: 1s
+      baseEjectionTime: 1m
