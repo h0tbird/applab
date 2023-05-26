@@ -8,6 +8,6 @@ metadata:
 spec:
   ports:
   - name: tcp
-    port: 9000
+    port: 7070
   selector:
     app: echo
