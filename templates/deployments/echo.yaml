@@ -19,7 +19,7 @@ spec:
       - name: echo
         image: h0tbird/tcp-echo-server:1.2
         imagePullPolicy: IfNotPresent
-        args: [ "9000,9001", "{{ .Release.Name }}" ]
+        args: [ "9000,9001", "{{ .Release.Name }}: " ]
         ports:
         - containerPort: 9000
         - containerPort: 9001
