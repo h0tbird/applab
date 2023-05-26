@@ -9,7 +9,5 @@ spec:
   ports:
   - name: tcp
     port: 9000
-  - name: tcp-other
-    port: 9001
   selector:
     app: echo
