@@ -16,7 +16,7 @@ spec:
         app: httpbin
     spec:
       containers:
-      - image: h0tbird/httpbin:latest
+      - image: mccutchen/go-httpbin:latest
         name: go-httpbin
         ports:
         - containerPort: 8080
