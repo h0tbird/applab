@@ -7,7 +7,10 @@ metadata:
     app: echo
 spec:
   ports:
-  - name: tcp
-    port: 7070
+  - name: echo
+    port: 70
+    protocol: TCP
+    targetPort: echo
   selector:
     app: echo
+  type: ClusterIP
