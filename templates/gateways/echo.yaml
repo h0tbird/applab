@@ -8,8 +8,8 @@ spec:
     istio: ingressgateway
   servers:
   - port:
-      number: 31400
-      name: tcp
+      number: 70
+      name: echo
       protocol: TCP
     hosts:
     - "echo.{{ .Release.Name }}.demo.lab"

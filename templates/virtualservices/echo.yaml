@@ -10,9 +10,9 @@ spec:
   - echo.{{ .Release.Name }}.demo.lab
   tcp:
   - match:
-    - port: 31400
+    - port: 70
     route:
     - destination:
         host: echo.{{ .Release.Namespace }}.svc.{{ .Values.domain }}
         port:
-          number: 9000
+          number: 70
