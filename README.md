@@ -1,4 +1,4 @@
-# httpbin
+# applab
 
 Create files for hosts running this service out of kubernetes:
 ```console
