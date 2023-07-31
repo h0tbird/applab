@@ -1,0 +1,17 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: nghttpd
+spec:
+  gateways:
+  - nghttpd
+  hosts:
+  - nghttpd.{{ .Release.Name }}.demo.lab
+  http:
+  - name: default
+    route:
+    - destination:
+        host: nghttpd.{{ .Release.Namespace }}.svc.{{ .Values.domain }}
+        port:
+          number: 80

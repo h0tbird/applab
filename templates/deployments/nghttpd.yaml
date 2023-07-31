@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nghttpd
+  labels:
+    app: nghttpd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nghttpd
+  template:
+    metadata:
+      labels:
+        app: nghttpd
+    spec:
+      containers:
+      - image: h0tbird/nghttpd:latest
+        name: nghttpd
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP

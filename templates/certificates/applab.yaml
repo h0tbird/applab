@@ -9,6 +9,7 @@ spec:
   dnsNames:
   - "echo.{{ .Release.Name }}.demo.lab"
   - "httpbin.{{ .Release.Name }}.demo.lab"
+  - "nghttpd.{{ .Release.Name }}.demo.lab"
   issuerRef:
     name: ingress-ca
     kind: ClusterIssuer
