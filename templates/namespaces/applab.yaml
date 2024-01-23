@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   labels:
-    istio.io/rev: 1-18-2
+    istio.io/rev: 1-19-6
   name: {{ .Release.Namespace }}
 spec:
   finalizers:
